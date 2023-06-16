@@ -1,8 +1,8 @@
-import { Link, Grid, Avatar, Container } from "@mui/material"
-import { navItems } from "../../Configs/app"
-import headshot from "./Assets/headshot.svg"
+import { Link, Grid, Avatar, Container } from "@mui/material";
+import { navItems } from "../../Configs/app";
+import headshot from "../../Assets/headshotMini.svg";
 
-export const Nav = () => {
+export const Nav: React.FC = () => {
     return (
         <Container
             sx={{

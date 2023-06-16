@@ -1,7 +1,11 @@
-import { NavContent } from "../Types/content.type";
-import Behance from "./Assets/Behance.svg";
+import { NavItems, SMIcons } from "../Types/content.type";
+import {ReactComponent as behance} from "../Assets/behance.svg";
+import {ReactComponent as linkedIn} from "../Assets/linkedIn.svg";
+import {ReactComponent as telegram} from "../Assets/telegram.svg";
+import {ReactComponent as whatsapp} from "../Assets/whatsapp.svg";
+export {ReactComponent as Headshot} from "../Assets/headshotBig.svg";
 
-export const navItems: NavContent = [
+export const navItems: NavItems = [
     {
         name: "Home",
         link: ""
@@ -20,25 +24,25 @@ export const navItems: NavContent = [
     },
 ]
 
-export const smIcons = [
+export const smIcons: SMIcons = [
     {
-        name: "",
-        img: "",
+        name: "linkedIn",
+        img: linkedIn,
         link: "",
     },
     {
-        name: "",
-        img: "",
+        name: "telegram",
+        img: telegram,
         link: "",
     },
     {
-        name: "",
-        img: "",
+        name: "whatsapp",
+        img: whatsapp,
         link: "",
     },
     {
-        name: "",
-        img: Behance,
+        name: "behance",
+        img: behance,
         link: "",
     },
 ]
