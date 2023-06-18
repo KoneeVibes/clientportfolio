@@ -4,6 +4,7 @@ import {ReactComponent as linkedIn} from "../Assets/linkedIn.svg";
 import {ReactComponent as telegram} from "../Assets/telegram.svg";
 import {ReactComponent as whatsapp} from "../Assets/whatsapp.svg";
 export {ReactComponent as Headshot} from "../Assets/headshotBig.svg";
+export {ReactComponent as Wave} from "../Assets/wave.svg";
 
 export const navItems: NavItems = [
     {

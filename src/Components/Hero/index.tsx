@@ -1,7 +1,12 @@
-import { Box, Container, Typography } from "@mui/material";
-import { Headshot, smIcons } from "../../Configs/app";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
+import { Wave, Headshot, smIcons } from "../../Configs/app";
+import "./styled.css";
 
-export const Hero: React.FC = () => {
+export const Hero: React.FC<{}> = () => {
+
+    const miniTabletScreenAndUpwards = useMediaQuery("(min-width: 425px)");
+    const laptopScreenAndUpwards = useMediaQuery("(min-width: 1024px)");
+
     return (
         <Container
             sx={{
@@ -15,43 +20,53 @@ export const Hero: React.FC = () => {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
+                    gap: "var(--flexGap)",
                     width: "100%",
                 }}
             >
-                    <Box>
-                        <Typography
-                            variant="h1"
-                            color={"#FFFFFF"}
-                            textAlign={"center"}
-                        >
-                            Hello!
-                        </Typography>
-                        <Typography
-                            variant="h2"
-                            color={"#FFFFFF"}
-                            textAlign={"center"}
-                        >
-                            I’m Bright Emmanuel
-                        </Typography>
-                        <Typography
-                            variant="h3"
-                            color={"#FFFFFF"}
-                            textAlign={"center"}
-                        >
-                            a Visual Designer
-                        </Typography>
-                    </Box>
-                    <Headshot 
+                <Typography
+                    variant="h1"
+                    color={"#FFFFFF"}
+                    textAlign={"center"}
+                    fontSize={"medium"}
+                    whiteSpace={"normal"}
+                >
+                    <span className="letterH">
+                        H
+                    </span>
+                    <span className="hello">
+                        ello!
+                    </span>
+                    <Wave
                         style={{
-                            display: "block",
-                            marginLeft: "auto",
-                            marginRight: "auto",
+                            width: (laptopScreenAndUpwards) ? undefined : "20px",
+                            height: (laptopScreenAndUpwards) ? undefined : "auto"
                         }}
                     />
+                    <br />
+                    <span className="myName">
+                        I’m Bright Emmanuel
+                    </span><br />
+                    <span className="letterA">
+                        a
+                    </span>
+                    <span className="myProfession">
+                        Visual Designer
+                    </span>
+                </Typography>
+                <Headshot
+                    style={{
+                        display: "block",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        width: "100%",
+                        height: (miniTabletScreenAndUpwards) ? undefined : "auto",
+                    }}
+                />
             </Box>
             <Box
                 sx={{
-                    display: "flex",
+                    display: { mobile: "none", laptop: "flex" },
                     flexDirection: "column",
                     gap: "2rem",
                 }}
