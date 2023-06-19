@@ -10,3 +10,7 @@ export type SMIcons = {
     img: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
     link: string
 }[]
+
+export type Services = string[]
+
+export type Clients = React.FunctionComponent<React.SVGProps<SVGSVGElement>>[]

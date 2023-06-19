@@ -38,7 +38,7 @@
 html {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: var(--pagePadding);
   height: 100%;
   background-color: #000000;
   background-image: url("./Assets/bgImage.svg");
@@ -46,11 +46,12 @@ html {
   background-repeat: no-repeat;
   --cardPadding: 2rem;
   --navHeight: 4rem;
+  --marqueeGap: 3.75rem;
 }
 
 @media screen and (min-width: 0px) {
   html {
-    padding: 1.25rem;
+    --pagePadding: 1.25rem;
     --flexGap: 1.25rem;
     --sectionMargin: 1.25rem;
   }
@@ -58,7 +59,7 @@ html {
 
 @media screen and (min-width: 425px) {
   html {
-    padding: 2.5rem;
+    --pagePadding: 2.5rem;
     --flexGap: 2.5rem;
     --sectionMargin: 2.5rem;
   }
@@ -66,7 +67,7 @@ html {
 
 @media screen and (min-width: 768px) {
   html {
-    padding: 3.75rem;
+    --pagePadding: 3.75rem;
     --flexGap: 3.75rem;
     --sectionMargin: 3.75rem;
   }
