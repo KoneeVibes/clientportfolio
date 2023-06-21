@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: "AriaCoachella";
+  font-family: "ArianeCoachella";
   src: url("./Fonts/ArialCoachella/ArianeCoachella-Bold.ttf") format('truetype'),
     url("./Fonts/ArialCoachella/ArianeCoachella-BoldItalic.ttf") format('truetype'),
     url("./Fonts/ArialCoachella/ArianeCoachella-ExtraBold.ttf") format('truetype'),
@@ -32,7 +32,7 @@
     url("./Fonts/ArialCoachella/ArianeCoachella-Regular.ttf") format('truetype'),
     url("./Fonts/ArialCoachella/ArianeCoachella-SemiBold.ttf") format('truetype'),
     url("./Fonts/ArialCoachella/ArianeCoachella-Thin.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-ThinItalic.ttf") format('truetype'), ;
+    url("./Fonts/ArialCoachella/ArianeCoachella-ThinItalic.ttf") format('truetype'),
 }
 
 html {

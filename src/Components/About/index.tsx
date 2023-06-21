@@ -13,7 +13,7 @@ export const About: React.FC<{}> = () => {
                 marginBottom: "var(--sectionMargin)",
                 background: "#F5F3F3",
                 borderRadius: "18px",
-                padding: (smallerScreens) ? "0.5rem" : "4rem",
+                padding: { mobile: (smallerScreens) ? "0.5rem" : "2rem", tablet: "4rem" },
                 display: "flex",
                 flexDirection: "column",
                 gap: (smallerScreens) ? "0.5rem" : "2rem",
@@ -92,7 +92,7 @@ export const About: React.FC<{}> = () => {
                                     background: "#010101",
                                     padding: (smallerScreens) ? "10%" : "var(--cardPadding)",
                                     borderRadius: "19px",
-                                    height: {mobile: "auto", laptop: "15.875rem"},
+                                    height: { mobile: "auto", laptop: "15.875rem" },
                                     cursor: "pointer"
                                 }}
                                 flex={1}

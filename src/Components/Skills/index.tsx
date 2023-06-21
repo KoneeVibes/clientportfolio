@@ -1,0 +1,214 @@
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
+import { skills } from "../../Configs/app";
+import "./styled.css";
+
+export const Skills: React.FC<{}> = () => {
+
+    const smallerScreens = useMediaQuery("(max-width: 280px)");
+
+    return (
+        <Container
+            sx={{
+                marginTop: { mobile: "10rem", miniTablet: "15rem", tablet: "20rem", laptop: "25rem", desktop: "20rem" },
+                marginBottom: "var(--sectionMargin)",
+                display: "flex",
+                flexDirection: "column",
+                gap: "var(--flexGap)",
+            }}
+        >
+            <Typography
+                color={"#FFFFFF"}
+                fontFamily={"Fractul"}
+                textAlign={"center"}
+                fontWeight={400}
+                lineHeight={1.2}
+                sx={{
+                    fontSize: { mobile: "12px", miniTablet: "18px", tablet: "24px", desktop: "32px" }
+                }}
+            >
+                Skills
+            </Typography>
+            <Box
+                sx={{
+                    position: { desktop: "relative" },
+                    width: "100%"
+                }}
+            >
+                <Box
+                    component={"div"}
+                    className="crossLeft"
+                    display={"flex"}
+                    overflow={"hidden"}
+                    gap={"var(--marqueeGap)"}
+                    alignItems={"center"}
+                    paddingTop={"var(--cardPadding)"}
+                    paddingBottom={"var(--cardPadding)"}
+                    sx={{
+                        userSelect: "none",
+                        background: "linear-gradient(268.67deg, rgba(140, 140, 140, 0.22) 0.54%, rgba(80, 80, 80, 0.08) 69.42%)",
+                        backdropFilter: "blur(7px)",
+                        borderTop: "1px solid #FFFFFF",
+                        borderBottom: "1px solid #FFFFFF",
+                        position: { desktop: "absolute" },
+                        // If I ever come back here, I should be able to write a function that will dynamically calculate the offset to be added to
+                        // 100vw. 
+                        width: { desktop: "calc(100vw + 1.87rem)" },
+                        marginLeft: {
+                            mobile: (smallerScreens) ? "calc(-0.5rem - var(--pagePadding))" : "calc(-2rem - var(--pagePadding))",
+                            tablet: "calc(-4rem - var(--pagePadding))", 
+                        },
+                        marginRight: {
+                            mobile: (smallerScreens) ? "calc(-0.5rem - var(--pagePadding))" : "calc(-2rem - var(--pagePadding))",
+                            tablet: "calc(-4rem - var(--pagePadding))", 
+                        },
+                    }}
+                >
+                    <div
+                        style={{
+                            flexShrink: "0",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            minWidth: "100%",
+                            gap: "var(--marqueeGap)",
+                            animation: "scroll 10s linear infinite",
+                        }}
+                    >
+                        {skills.map((skill, i) => {
+                            return (
+                                <Typography
+                                    key={i}
+                                    fontFamily={"Inter"}
+                                    fontWeight={400}
+                                    lineHeight={1.21}
+                                    color={"#FFFFFF"}
+                                    sx={{
+                                        fontSize: { mobile: "12px", miniTablet: "18px", tablet: "24px", desktop: "32px" }
+                                    }}
+                                >
+                                    {skill}
+                                </Typography>
+                            )
+                        })}
+                    </div>
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            flexShrink: "0",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            minWidth: "100%",
+                            gap: "var(--marqueeGap)",
+                            animation: "scroll 10s linear infinite",
+                        }}
+                    >
+                        {skills.map((skill, i) => {
+                            return (
+                                <Typography
+                                    key={i}
+                                    fontFamily={"Inter"}
+                                    fontWeight={400}
+                                    lineHeight={1.21}
+                                    color={"#FFFFFF"}
+                                    sx={{
+                                        fontSize: { mobile: "12px", miniTablet: "18px", tablet: "24px", desktop: "32px" }
+                                    }}
+                                >
+                                    {skill}
+                                </Typography>
+                            )
+                        })}
+                    </div>
+                </Box>
+                <Box
+                    component={"div"}
+                    className="crossRight"
+                    display={"flex"}
+                    overflow={"hidden"}
+                    gap={"var(--marqueeGap)"}
+                    alignItems={"center"}
+                    paddingTop={"var(--cardPadding)"}
+                    paddingBottom={"var(--cardPadding)"}
+                    sx={{
+                        userSelect: "none",
+                        background: "linear-gradient(268.67deg, rgba(140, 140, 140, 0.22) 0.54%, rgba(80, 80, 80, 0.08) 69.42%)",
+                        backdropFilter: "blur(7px)",
+                        borderTop: "1px solid #FFFFFF",
+                        borderBottom: "1px solid #FFFFFF",
+                        position: { desktop: "absolute" },
+                        // If I ever come back here, I should be able to write a function that will dynamically calculate the offset to be added to
+                        // 100vw. 
+                        width: { desktop: "calc(100vw + 1.87rem)" },
+                        marginLeft: {
+                            mobile: (smallerScreens) ? "calc(-0.5rem - var(--pagePadding))" : "calc(-2rem - var(--pagePadding))",
+                            tablet: "calc(-4rem - var(--pagePadding))",
+                        },
+                        marginRight: {
+                            mobile: (smallerScreens) ? "calc(-0.5rem - var(--pagePadding))" : "calc(-2rem - var(--pagePadding))",
+                            tablet: "calc(-4rem - var(--pagePadding))",
+                        },
+                    }}
+                >
+                    <div
+                        style={{
+                            flexShrink: "0",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            minWidth: "100%",
+                            gap: "var(--marqueeGap)",
+                            animation: "scrollReverse 10s linear infinite",
+                        }}
+                    >
+                        {skills.map((skill, i) => {
+                            return (
+                                <Typography
+                                    key={i}
+                                    fontFamily={"Inter"}
+                                    fontWeight={400}
+                                    lineHeight={1.21}
+                                    color={"#FFFFFF"}
+                                    sx={{
+                                        fontSize: { mobile: "12px", miniTablet: "18px", tablet: "24px", desktop: "32px" }
+                                    }}
+                                >
+                                    {skill}
+                                </Typography>
+                            )
+                        })}
+                    </div>
+                    <div
+                        aria-hidden="true"
+                        style={{
+                            flexShrink: "0",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-around",
+                            minWidth: "100%",
+                            gap: "var(--marqueeGap)",
+                            animation: "scrollReverse 10s linear infinite",
+                        }}
+                    >
+                        {skills.map((skill, i) => {
+                            return (
+                                <Typography
+                                    key={i}
+                                    fontFamily={"Inter"}
+                                    fontWeight={400}
+                                    lineHeight={1.21}
+                                    color={"#FFFFFF"}
+                                    sx={{
+                                        fontSize: { mobile: "12px", miniTablet: "18px", tablet: "24px", desktop: "32px" }
+                                    }}
+                                >
+                                    {skill}
+                                </Typography>
+                            )
+                        })}
+                    </div>
+                </Box>
+            </Box>
+        </Container>
+    )
+}

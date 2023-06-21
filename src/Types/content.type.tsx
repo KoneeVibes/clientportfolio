@@ -14,3 +14,17 @@ export type SMIcons = {
 export type Services = string[]
 
 export type Clients = React.FunctionComponent<React.SVGProps<SVGSVGElement>>[]
+
+export type Projects = {
+    img: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+    name: string
+    description: string
+    layout: string
+}[]
+
+export type Events = {
+    eventName: string
+    img: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+}[]
+
+export type Skills = string[]

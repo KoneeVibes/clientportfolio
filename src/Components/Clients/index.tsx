@@ -51,6 +51,8 @@ export const Clients: React.FC = () => {
                     userSelect: "none",
                     background: "linear-gradient(268.67deg, rgba(140, 140, 140, 0.22) 0.54%, rgba(80, 80, 80, 0.08) 69.42%)",
                     backdropFilter: "blur(7px)",
+                    borderTop: "1px solid #FFFFFF",
+                    borderBottom: "1px solid #FFFFFF",
                 }}
             >
                 <div
