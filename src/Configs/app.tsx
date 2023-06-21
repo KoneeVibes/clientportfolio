@@ -38,6 +38,8 @@ export { ReactComponent as Wave } from "../Assets/wave.svg";
 export { ReactComponent as Arrow } from "../Assets/arrow.svg";
 export { ReactComponent as BlockArrow } from "../Assets/blockArrow.svg"
 export { ReactComponent as Students } from "../Assets/students.svg";
+export { ReactComponent as TelegramIcon } from "../Assets/telegramIcon.svg";
+export { ReactComponent as WaveIcon } from "../Assets/smallWave.svg";
 
 export const navItems: NavItems = [
     {

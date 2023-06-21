@@ -18,6 +18,7 @@ export const Skills: React.FC<{}> = () => {
             }}
         >
             <Typography
+                variant="h2"
                 color={"#FFFFFF"}
                 fontFamily={"Fractul"}
                 textAlign={"center"}
@@ -56,7 +57,7 @@ export const Skills: React.FC<{}> = () => {
                         position: { desktop: "absolute" },
                         // If I ever come back here, I should be able to write a function that will dynamically calculate the offset to be added to
                         // 100vw.
-                        width: { desktop: "calc(100vw + 1.87rem)" },
+                        width: { desktop: "100vw" },
                         marginLeft: {
                             mobile: (smallerScreens) ? "calc(-0.5rem - var(--pagePadding))" : "calc(-2rem - var(--pagePadding))",
                             tablet: "calc(-4rem - var(--pagePadding))",
@@ -143,7 +144,7 @@ export const Skills: React.FC<{}> = () => {
                         position: { desktop: "absolute" },
                         // If I ever come back here, I should be able to write a function that will dynamically calculate the offset to be added to
                         // 100vw. 
-                        width: { desktop: "calc(100vw + 1.87rem)" },
+                        width: { desktop: "100vw" },
                         marginLeft: {
                             mobile: (smallerScreens) ? "calc(-0.5rem - var(--pagePadding))" : "calc(-2rem - var(--pagePadding))",
                             tablet: "calc(-4rem - var(--pagePadding))",

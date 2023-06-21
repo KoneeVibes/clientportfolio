@@ -73,7 +73,7 @@ html {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   html {
     background-image: url("./Assets/bgImage.svg");
   }

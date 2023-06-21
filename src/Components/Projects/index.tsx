@@ -173,6 +173,7 @@ export const Projects: React.FC<{}> = () => {
                 >
                     <Box>
                         <Typography
+                            variant="h3"
                             textAlign={"center"}
                             lineHeight={1.43}
                             fontWeight={400}
