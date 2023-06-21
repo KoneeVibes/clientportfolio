@@ -23,6 +23,7 @@ export const Hero: React.FC<{}> = () => {
                     gap: "var(--flexGap)",
                     width: "100%",
                 }}
+                className="headshotBox"
             >
                 <Typography
                     variant="h1"
@@ -59,9 +60,10 @@ export const Hero: React.FC<{}> = () => {
                         display: "block",
                         marginLeft: "auto",
                         marginRight: "auto",
-                        width: "100%",
+                        width: "80%",
                         height: (miniTabletScreenAndUpwards) ? undefined : "auto",
                     }}
+                    className="headshot"
                 />
             </Box>
             <Box

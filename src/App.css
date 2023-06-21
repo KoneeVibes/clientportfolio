@@ -53,7 +53,8 @@ html {
   html {
     --pagePadding: 1.25rem;
     --flexGap: 1.25rem;
-    --sectionMargin: 1.25rem;
+    --sectionMargin: 2.5rem;
+    background-image: url("./Assets/bgMobile.svg");
   }
 }
 
@@ -61,7 +62,6 @@ html {
   html {
     --pagePadding: 2.5rem;
     --flexGap: 2.5rem;
-    --sectionMargin: 2.5rem;
   }
 }
 
@@ -70,6 +70,12 @@ html {
     --pagePadding: 3.75rem;
     --flexGap: 3.75rem;
     --sectionMargin: 3.75rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    background-image: url("./Assets/bgImage.svg");
   }
 }
 

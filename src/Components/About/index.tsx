@@ -22,16 +22,16 @@ export const About: React.FC<{}> = () => {
             <Box
                 display={"flex"}
                 flexDirection={"column"}
-                gap={(smallerScreens) ? "0.5rem" : "2rem"}
+                gap={(smallerScreens) ? "0.5rem" : "var(--flexGap)"}
             >
                 <Typography
                     variant="h3"
                     textAlign={"center"}
                     fontFamily={"Inter"}
-                    fontWeight={"600"}
+                    fontWeight={600}
+                    lineHeight={1.2}
                     sx={{
                         fontSize: { mobile: "14px", miniTablet: "32px" },
-                        lineHeight: { mobile: "52.5px", miniTablet: "100px" }
                     }}
                 >
                     About me
@@ -60,16 +60,16 @@ export const About: React.FC<{}> = () => {
             <Box
                 display={"flex"}
                 flexDirection={"column"}
-                gap={(smallerScreens) ? "0.5rem" : "2rem"}
+                gap={(smallerScreens) ? "0.5rem" : "var(--flexGap)"}
             >
                 <Typography
                     variant="h3"
                     textAlign={"center"}
                     fontFamily={"Inter"}
-                    fontWeight={"600"}
+                    fontWeight={600}
+                    lineHeight={1.2}
                     sx={{
                         fontSize: { mobile: "14px", miniTablet: "32px" },
-                        lineHeight: { mobile: "52.5px", miniTablet: "100px" }
                     }}
                 >
                     My Services
@@ -93,7 +93,7 @@ export const About: React.FC<{}> = () => {
                                     padding: (smallerScreens) ? "10%" : "var(--cardPadding)",
                                     borderRadius: "19px",
                                     height: { mobile: "auto", laptop: "15.875rem" },
-                                    cursor: "pointer"
+                                    cursor: "pointer",
                                 }}
                                 flex={1}
                                 overflow={(smallerScreens) ? "hidden" : "visible"}

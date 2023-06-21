@@ -16,7 +16,23 @@ import { ReactComponent as meta } from "../Assets/meta.svg";
 import { ReactComponent as lemon } from "../Assets/lemon.svg";
 import { ReactComponent as capitalBloc } from "../Assets/capitalBloc.svg";
 import { ReactComponent as open } from "../Assets/open.svg";
-import { ReactComponent as event1 } from "../Assets/event1.svg";
+import event1 from "../Assets/event1.svg";
+import event2 from "../Assets/event2.svg";
+import event3 from "../Assets/event3.svg";
+import event4 from "../Assets/event4.svg";
+import event5 from "../Assets/event5.svg";
+import event6 from "../Assets/event6.svg";
+import event7 from "../Assets/event7.svg";
+import event8 from "../Assets/event8.svg";
+import event9 from "../Assets/event9.svg";
+import event10 from "../Assets/event10.svg";
+import event11 from "../Assets/event11.svg";
+import event12 from "../Assets/event12.svg";
+import event13 from "../Assets/event13.svg";
+import event14 from "../Assets/event14.svg";
+import event15 from "../Assets/event15.svg";
+import event16 from "../Assets/event16.svg";
+import event17 from "../Assets/event17.svg";
 export { ReactComponent as Headshot } from "../Assets/headshotBig.svg";
 export { ReactComponent as Wave } from "../Assets/wave.svg";
 export { ReactComponent as Arrow } from "../Assets/arrow.svg";
@@ -113,16 +129,68 @@ export const events: Events = [
     },
     {
         eventName: "Edns Event",
-        img: event1,
+        img: event2,
     },
     {
         eventName: "Edns Event",
-        img: event1,
+        img: event3,
     },
     {
         eventName: "Edns Event",
-        img: event1,
+        img: event4,
+    },
+    {
+        eventName: "Edns Event",
+        img: event5,
+    },
+    {
+        eventName: "Edns Event",
+        img: event6,
+    },
+    {
+        eventName: "Edns Event",
+        img: event7,
+    },
+    {
+        eventName: "Edns Event",
+        img: event8,
+    },
+    {
+        eventName: "Edns Event",
+        img: event9,
+    },
+    {
+        eventName: "Edns Event",
+        img: event10,
+    },
+    {
+        eventName: "Edns Event",
+        img: event11,
+    },
+    {
+        eventName: "Edns Event",
+        img: event12,
+    },
+    {
+        eventName: "Edns Event",
+        img: event13,
+    },
+    {
+        eventName: "Edns Event",
+        img: event14,
+    },
+    {
+        eventName: "Edns Event",
+        img: event15,
+    },
+    {
+        eventName: "Edns Event",
+        img: event16,
+    },
+    {
+        eventName: "Edns Event",
+        img: event17,
     },
 ]
 
-export const skills: Skills = ["Adobe Photoshop", "Adobe illustrator", "Figma", "Adobe Premiere pro", "Adobe XD" ]
+export const skills: Skills = ["Adobe Photoshop", "Adobe illustrator", "Figma", "Adobe Premiere pro", "Adobe XD"]

@@ -7,6 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 export const Projects: React.FC<{}> = () => {
 
     const smallerScreens = useMediaQuery("(max-width: 280px)");
+    const laptopScreenDownwards = useMediaQuery("(max-width: 1024px)");
 
     return (
         <Container
@@ -187,7 +188,7 @@ export const Projects: React.FC<{}> = () => {
                                 display: "block",
                                 marginLeft: "auto",
                                 marginRight: "auto",
-                                width: "100%",
+                                width: (laptopScreenDownwards) ? "4%" : "auto",
                             }}
                         />
                     </Box>
@@ -210,16 +211,13 @@ export const Projects: React.FC<{}> = () => {
                                 <Box
                                     key={i}
                                     sx={{
-                                        maxHeight: { mobile: "12.5rem", tablet: "36rem" },
+                                        height: { mobile: "12.5rem", tablet: "36rem" },
                                         overflowY: "hidden",
+                                        position: "relative",
+                                        backgroundImage: `url(${event.img})`,
+                                        backgroundSize: "contain",
                                     }}
                                 >
-                                    <event.img
-                                        style={{
-                                            width: "100%",
-                                            height: "auto",
-                                        }}
-                                    />
                                 </Box>
                             )
                         })}
@@ -231,20 +229,11 @@ export const Projects: React.FC<{}> = () => {
                 container
                 flexDirection={"column"}
                 alignItems={"center"}
-                marginTop={(smallerScreens) ? undefined : "calc(var(--flexGap) * -1)"}
+                gap={"var(--flexGap)"}
             >
                 <Grid
                     item container
                     justifyContent={"center"}
-                    sx={{
-                        transform: {
-                            mobile: (smallerScreens) ? undefined : "translateY(140%)",
-                            miniTablet: "translateY(100%)",
-                            tablet: "translateY(150%)",
-                            laptop: "translateY(500%)",
-                            desktop: "translateY(100%)",
-                        },
-                    }}
                 >
                     <Typography
                         variant="h2"
@@ -262,15 +251,7 @@ export const Projects: React.FC<{}> = () => {
                         with a Diploma In Visual Design
                     </Typography>
                 </Grid>
-                <Grid
-                    item
-                    sx={{
-                        transform: {
-                            mobile: (smallerScreens) ? "translateY(calc(50% + 0.5rem))" : "translateY(50%)",
-                            desktop: "translateY(30%)",
-                        },
-                    }}
-                >
+                <Grid item>
                     <Students
                         style={{
                             width: "100%",

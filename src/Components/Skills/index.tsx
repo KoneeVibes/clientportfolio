@@ -5,11 +5,12 @@ import "./styled.css";
 export const Skills: React.FC<{}> = () => {
 
     const smallerScreens = useMediaQuery("(max-width: 280px)");
+    const laptopScreenDownwards = useMediaQuery("(max-width: 1024px)");
 
     return (
         <Container
             sx={{
-                marginTop: { mobile: "10rem", miniTablet: "15rem", tablet: "20rem", laptop: "25rem", desktop: "20rem" },
+                marginTop: "var(--sectionMargin)",
                 marginBottom: "var(--sectionMargin)",
                 display: "flex",
                 flexDirection: "column",
@@ -31,7 +32,10 @@ export const Skills: React.FC<{}> = () => {
             <Box
                 sx={{
                     position: { desktop: "relative" },
-                    width: "100%"
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
                 }}
             >
                 <Box
@@ -41,25 +45,25 @@ export const Skills: React.FC<{}> = () => {
                     overflow={"hidden"}
                     gap={"var(--marqueeGap)"}
                     alignItems={"center"}
-                    paddingTop={"var(--cardPadding)"}
-                    paddingBottom={"var(--cardPadding)"}
+                    paddingTop={(laptopScreenDownwards) ? "0.5rem" : "var(--cardPadding)"}
+                    paddingBottom={(laptopScreenDownwards) ? "0.5rem" : "var(--cardPadding)"}
                     sx={{
                         userSelect: "none",
-                        background: "linear-gradient(268.67deg, rgba(140, 140, 140, 0.22) 0.54%, rgba(80, 80, 80, 0.08) 69.42%)",
+                        background: "#000000",
                         backdropFilter: "blur(7px)",
                         borderTop: "1px solid #FFFFFF",
                         borderBottom: "1px solid #FFFFFF",
                         position: { desktop: "absolute" },
                         // If I ever come back here, I should be able to write a function that will dynamically calculate the offset to be added to
-                        // 100vw. 
+                        // 100vw.
                         width: { desktop: "calc(100vw + 1.87rem)" },
                         marginLeft: {
                             mobile: (smallerScreens) ? "calc(-0.5rem - var(--pagePadding))" : "calc(-2rem - var(--pagePadding))",
-                            tablet: "calc(-4rem - var(--pagePadding))", 
+                            tablet: "calc(-4rem - var(--pagePadding))",
                         },
                         marginRight: {
                             mobile: (smallerScreens) ? "calc(-0.5rem - var(--pagePadding))" : "calc(-2rem - var(--pagePadding))",
-                            tablet: "calc(-4rem - var(--pagePadding))", 
+                            tablet: "calc(-4rem - var(--pagePadding))",
                         },
                     }}
                 >
@@ -128,11 +132,11 @@ export const Skills: React.FC<{}> = () => {
                     overflow={"hidden"}
                     gap={"var(--marqueeGap)"}
                     alignItems={"center"}
-                    paddingTop={"var(--cardPadding)"}
-                    paddingBottom={"var(--cardPadding)"}
+                    paddingTop={(laptopScreenDownwards) ? "0.5rem" : "var(--cardPadding)"}
+                    paddingBottom={(laptopScreenDownwards) ? "0.5rem" : "var(--cardPadding)"}
                     sx={{
                         userSelect: "none",
-                        background: "linear-gradient(268.67deg, rgba(140, 140, 140, 0.22) 0.54%, rgba(80, 80, 80, 0.08) 69.42%)",
+                        background: "#000000",
                         backdropFilter: "blur(7px)",
                         borderTop: "1px solid #FFFFFF",
                         borderBottom: "1px solid #FFFFFF",

@@ -24,7 +24,7 @@ export type Projects = {
 
 export type Events = {
     eventName: string
-    img: React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+    img: string
 }[]
 
 export type Skills = string[]

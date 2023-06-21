@@ -1,9 +1,12 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, useMediaQuery } from "@mui/material";
 import { ReactComponent as Underline } from "../../Assets/wavyunderline.svg";
 import { clients } from "../../Configs/app";
 import "./styled.css";
 
 export const Clients: React.FC = () => {
+
+    const laptopScreenDownwards = useMediaQuery("(max-width: 1024px)");
+
     return (
         <Container
             sx={{
@@ -15,7 +18,13 @@ export const Clients: React.FC = () => {
                 padding: "0",
             }}
         >
-            <Box>
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.5rem",
+                }}
+            >
                 <Typography
                     variant="h2"
                     color={"#FFFFFF"}
@@ -34,7 +43,8 @@ export const Clients: React.FC = () => {
                         display: "block",
                         marginLeft: "auto",
                         marginRight: "auto",
-                        maxWidth: "100%",
+                        height: "auto",
+                        maxWidth: "30%",
                     }}
                 />
             </Box>
@@ -45,8 +55,8 @@ export const Clients: React.FC = () => {
                 alignItems={"center"}
                 marginLeft={"calc(var(--pagePadding) * -1)"}
                 marginRight={"calc(var(--pagePadding) * -1)"}
-                paddingTop={"var(--cardPadding)"}
-                paddingBottom={"var(--cardPadding)"}
+                paddingTop={(laptopScreenDownwards) ? "0.5rem" : "var(--cardPadding)"}
+                paddingBottom={(laptopScreenDownwards) ? "0.5rem" : "var(--cardPadding)"}
                 sx={{
                     userSelect: "none",
                     background: "linear-gradient(268.67deg, rgba(140, 140, 140, 0.22) 0.54%, rgba(80, 80, 80, 0.08) 69.42%)",
@@ -68,7 +78,13 @@ export const Clients: React.FC = () => {
                 >
                     {clients.map((Client, i) => {
                         return (
-                            <Client key={i} />
+                            <Client
+                                key={i}
+                                style={{
+                                    width: (laptopScreenDownwards) ? "5%" : "auto",
+                                    height: (laptopScreenDownwards) ? "2rem" : "auto",
+                                }}
+                            />
                         )
                     })}
                 </div>
@@ -86,7 +102,13 @@ export const Clients: React.FC = () => {
                 >
                     {clients.map((Client, i) => {
                         return (
-                            <Client key={i} />
+                            <Client
+                                key={i}
+                                style={{
+                                    width: (laptopScreenDownwards) ? "5%" : "auto",
+                                    height: (laptopScreenDownwards) ? "2rem" : "auto",
+                                }}
+                            />
                         )
                     })}
                 </div>
