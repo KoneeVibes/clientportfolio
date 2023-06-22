@@ -9,11 +9,11 @@ export const Nav: React.FC<{}> = () => {
     const [isActive, setIsActive] = useState(false);
     const tabletScreenAndUpwards = useMediaQuery("(min-width: 768px)");
 
-    useEffect(() => {
-        if (tabletScreenAndUpwards) {
-            setIsActive(false)
-        }
-    }, [tabletScreenAndUpwards])
+    // useEffect(() => {
+    if (tabletScreenAndUpwards) {
+        setIsActive(false)
+    }
+    // }, [tabletScreenAndUpwards])
 
 
     const handleIsActive = () => {
