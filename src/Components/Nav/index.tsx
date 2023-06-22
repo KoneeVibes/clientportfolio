@@ -2,19 +2,12 @@ import { Link, Grid, Avatar, Container, Box, useMediaQuery } from "@mui/material
 import { navItems } from "../../Configs/app";
 import headshot from "../../Assets/headshotMini.svg";
 import "./styled.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const Nav: React.FC<{}> = () => {
 
-    const [isActive, setIsActive] = useState(false);
     const tabletScreenAndUpwards = useMediaQuery("(min-width: 768px)");
-
-    // useEffect(() => {
-    if (tabletScreenAndUpwards) {
-        setIsActive(false)
-    }
-    // }, [tabletScreenAndUpwards])
-
+    const [isActive, setIsActive] = useState(!tabletScreenAndUpwards);
 
     const handleIsActive = () => {
         setIsActive(!isActive);
