@@ -41,7 +41,7 @@ html {
   padding: var(--pagePadding);
   height: 100%;
   background-color: #000000;
-  background-image: url("./Assets/bgImage.svg");
+  /* background-image: url("./Assets/bgImage.svg"); */
   background-size: cover;
   background-repeat: no-repeat;
   --cardPadding: 2rem;
@@ -54,7 +54,7 @@ html {
     --pagePadding: 1.25rem;
     --flexGap: 1.25rem;
     --sectionMargin: 2.5rem;
-    background-image: url("./Assets/bgMobile.svg");
+    /* background-image: url("./Assets/bgMobile.svg"); */
   }
 }
 
@@ -75,7 +75,7 @@ html {
 
 @media screen and (min-width: 1200px) {
   html {
-    background-image: url("./Assets/bgImage.svg");
+    /* background-image: url("./Assets/bgImage.svg"); */
   }
 }
 
