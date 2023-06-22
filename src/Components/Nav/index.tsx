@@ -7,7 +7,7 @@ import { useState } from "react";
 export const Nav: React.FC<{}> = () => {
 
     const tabletScreenAndUpwards = useMediaQuery("(min-width: 768px)");
-    const [isActive, setIsActive] = useState(!tabletScreenAndUpwards);
+    const [isActive, setIsActive] = useState((tabletScreenAndUpwards)? !tabletScreenAndUpwards : false);
 
     const handleIsActive = () => {
         setIsActive(!isActive);
