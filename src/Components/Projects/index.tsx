@@ -217,6 +217,7 @@ export const Projects: React.FC<{}> = () => {
                                         position: "relative",
                                         backgroundImage: `url(${event.img})`,
                                         backgroundSize: "contain",
+                                        backgroundRepeat: "repeat",
                                     }}
                                 >
                                 </Box>
