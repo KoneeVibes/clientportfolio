@@ -12,7 +12,7 @@
 @font-face {
   font-family: "ArianeCoachella";
   src:
-    url("./Fonts/ArialCoachella/ArianeCoachella-Regular.ttf"),
+    url("./Fonts/ArialCoachella/ArianeCoachella-Regular.ttf") format('truetype'),
 }
 
 html {
