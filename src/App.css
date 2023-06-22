@@ -2,37 +2,17 @@
 
 @font-face {
   font-family: 'Fractul';
-  src: url("./Fonts/Fractul/Fractul-Black.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-BlackItalic.ttf") format("truetype"),
-    url("./Fonts/Fractul/Fractul-Bold.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-BoldItalic.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-ExtraBold.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-ExtraBoldItalic.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-Hairline.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-HairlineItalic.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-Italic.ttf") format('truetype'),
+  src:
     url("./Fonts/Fractul/Fractul-Light.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-LightItalic.ttf") format('truetype'),
     url("./Fonts/Fractul/Fractul-Medium.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-MediumItalic.ttf") format('truetype'),
     url("./Fonts/Fractul/Fractul-Regular.ttf") format('truetype'),
     url("./Fonts/Fractul/Fractul-SemiBold.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-SemiBoldItalic.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-Thin.ttf") format('truetype'),
-    url("./Fonts/Fractul/Fractul-ThinItalic.ttf") format('truetype'),
 }
 
 @font-face {
   font-family: "ArianeCoachella";
-  src: url("./Fonts/ArialCoachella/ArianeCoachella-Bold.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-BoldItalic.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-ExtraBold.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-ExtraBoldItalic.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-Italic.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-Regular.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-SemiBold.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-Thin.ttf") format('truetype'),
-    url("./Fonts/ArialCoachella/ArianeCoachella-ThinItalic.ttf") format('truetype'),
+  src:
+    url("./Fonts/ArialCoachella/ArianeCoachella-Regular.ttf"),
 }
 
 html {
