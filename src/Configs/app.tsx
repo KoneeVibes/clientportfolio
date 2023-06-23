@@ -48,11 +48,11 @@ export const navItems: NavItems = [
     },
     {
         name: "About",
-        link: ""
+        link: "#about"
     },
     {
         name: "Projects",
-        link: ""
+        link: "#projects"
     },
     {
         name: "Download CV",

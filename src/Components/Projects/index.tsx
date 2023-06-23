@@ -11,6 +11,8 @@ export const Projects: React.FC<{}> = () => {
 
     return (
         <Container
+            component={"div"}
+            id="projects"
             sx={{
                 background: "#F2EEEE",
                 marginTop: "var(--sectionMargin)",
@@ -217,7 +219,6 @@ export const Projects: React.FC<{}> = () => {
                                         position: "relative",
                                         backgroundImage: `url(${event.img})`,
                                         backgroundSize: "contain",
-                                        backgroundRepeat: "repeat",
                                     }}
                                 >
                                 </Box>

@@ -8,6 +8,8 @@ export const About: React.FC<{}> = () => {
 
     return (
         <Container
+            component={"div"}
+            id="about"
             sx={{
                 marginTop: "var(--sectionMargin)",
                 marginBottom: "var(--sectionMargin)",

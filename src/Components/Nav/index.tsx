@@ -1,20 +1,30 @@
-import { Link, Grid, Avatar, Container, Box, useMediaQuery } from "@mui/material";
+import { Grid, Avatar, Container, Box, useMediaQuery } from "@mui/material";
 import { navItems } from "../../Configs/app";
 import headshot from "../../Assets/headshotMini.svg";
 import "./styled.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
 
 export const Nav: React.FC<{}> = () => {
 
     const tabletScreenAndUpwards = useMediaQuery("(min-width: 768px)");
-    const [isActive, setIsActive] = useState((tabletScreenAndUpwards)? !tabletScreenAndUpwards : false);
+    const [isActive, setIsActive] = useState(false);
+
+    useEffect(() => {
+        if (tabletScreenAndUpwards) {
+            setIsActive(false)
+            document.body.style.overflowY = 'visible';
+        }
+    }, [tabletScreenAndUpwards, isActive])
 
     const handleIsActive = () => {
-        setIsActive(!isActive);
-        if (isActive) {
-            document.body.style.overflowY = 'visible';
-        } else {
-            document.body.style.overflowY = 'hidden';
+        if (!tabletScreenAndUpwards) {
+            setIsActive(!isActive);
+            if (isActive) {
+                document.body.style.overflowY = 'visible';
+            } else {
+                document.body.style.overflowY = 'hidden';
+            }
         }
     }
 
@@ -55,26 +65,20 @@ export const Nav: React.FC<{}> = () => {
                 {navItems.map((item, i) => {
                     return (
                         <Grid
+                            component={"div"}
                             key={i} item
                             sx={{
                                 textAlign: (isActive) ? "center" : "left",
                             }}
+                            onClick={() => handleIsActive()}
                         >
-                            <Link
-                                fontFamily={"Fractul"}
-                                fontWeight={"400"}
-                                lineHeight={"19.2px"}
-                                color={"#FFFFFF"}
-                                underline="none"
-                                sx={{
-                                    cursor: "pointer",
-                                    "&:hover": { color: "#E7CD8E" },
-                                    fontSize: { mobile: "16px", miniTablet: "24px", tablet: "16px" },
-                                    wordBreak: "break-all",
-                                }}
+                            <HashLink
+                                to={item.link}
+                                smooth={true}
+                                className="navLinks"
                             >
                                 {item.name}
-                            </Link>
+                            </HashLink>
                         </Grid>
                     )
                 })}
